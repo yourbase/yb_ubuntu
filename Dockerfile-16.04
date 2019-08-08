@@ -1,0 +1,10 @@
+FROM ubuntu:16.04
+RUN apt update
+RUN apt install -y git
+RUN apt install -y build-essential 
+RUN apt install -y libssl-dev libreadline-dev zlib1g-dev libbz2-dev libsqlite3-dev ca-certificates
+RUN apt install -y wget curl
+# I'd like to avoid this but for now... ‾\_('')_/‾
+RUN apt install -y software-properties-common libpq-dev libmysqlclient-dev tzdata file imagemagick libxml2-dev libxslt-dev libtool-bin libyaml-dev libreadline-dev autoconf pkg-config gettext
+# 16.04 specific?
+RUN apt install -y libglib2.0-dev
