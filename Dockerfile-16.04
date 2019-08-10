@@ -4,7 +4,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y git build-essential libssl-dev
                                                   libsqlite3-dev ca-certificates wget curl software-properties-common \
                                                   tzdata file 
 # I'd like to avoid this but for now... ‾\_('')_/‾
-RUN DEBIAN_FRONTEND=noninteractive apt install -y libpq-dev libmysqlclient-dev imagemagick libxml2-dev libxslt-dev 
+RUN DEBIAN_FRONTEND=noninteractive apt install -y libpq-dev libmysqlclient-dev imagemagick libxml2-dev libxslt-dev \
                                                   libyaml-dev libreadline-dev autoconf pkg-config gettextlibtool-bin 
 
 # 16.04 specific?
