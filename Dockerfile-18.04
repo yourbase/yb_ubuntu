@@ -8,4 +8,4 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y git build-essential libssl-dev
 RUN DEBIAN_FRONTEND=noninteractive apt install -y software-properties-common libpq-dev libmysqlclient-dev \
                                                   imagemagick libxml2-dev libxslt-dev libtool-bin libyaml-dev \
                                                   libreadline-dev autoconf pkg-config gettext libglib2.0-dev \
-                                                  libyaml
+                                                  libyaml-0-2
