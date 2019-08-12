@@ -5,7 +5,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y git build-essential libssl-dev
                                                   tzdata file 
 # I'd like to avoid this but for now... ‾\_('')_/‾
 RUN DEBIAN_FRONTEND=noninteractive apt install -y libpq-dev libmysqlclient-dev imagemagick libxml2-dev libxslt-dev \
-                                                  libyaml-dev libreadline-dev autoconf pkg-config gettextlibtool-bin 
+                                                  libyaml libyaml-dev libreadline-dev autoconf pkg-config gettextlibtool-bin 
 
 # 16.04 specific?
 RUN apt install -y libglib2.0-dev
