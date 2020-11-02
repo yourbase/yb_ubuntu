@@ -44,12 +44,12 @@ jobs:
       with:
         file: ./Dockerfile-16.04
         tags: |
-          yourbase/yb_ubuntu/yb_ubuntu:16.04
+          docker.pkg.github.com/yourbase/yb_ubuntu/yb_ubuntu:16.04
         push: true
     - name: Build and Push 18.04 image
       uses: docker/build-push-action@v2
       with:
         file: ./Dockerfile-18.04
         tags: |
-          yourbase/yb_ubuntu/yb_ubuntu:18.04
+          docker.pkg.github.com/yourbase/yb_ubuntu/yb_ubuntu:18.04
         push: true
