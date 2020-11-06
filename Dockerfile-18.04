@@ -28,6 +28,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
     git \
     gzip \
     imagemagick \
+    jq \
     libbz2-dev \
     libglib2.0-dev \
     libmagickcore-dev \
