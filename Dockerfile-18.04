@@ -43,6 +43,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
     libxslt-dev \
     libyaml-0-2 \
     libyaml-dev \
+    openssh-client \
     pkg-config \
     software-properties-common \
     tar \
