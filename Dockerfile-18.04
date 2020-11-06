@@ -17,7 +17,7 @@
 FROM ubuntu:18.04
 
 # Please keep the following list sorted.
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     autoconf \
     build-essential \
     bzip2 \
@@ -48,7 +48,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     tzdata \
     unzip \
     wget \
-    xzutils \
+    xz-utils \
     zip \
     zlib1g-dev \
   && rm -rf /var/lib/apt/lists/*
