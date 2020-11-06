@@ -15,13 +15,40 @@
 # SPDX-License-Identifier: Apache-2.0
 
 FROM ubuntu:18.04
-RUN apt update
-RUN DEBIAN_FRONTEND=noninteractive apt install -y git build-essential libssl-dev libreadline-dev \
-                                                  zlib1g-dev libbz2-dev libsqlite3-dev ca-certificates \
-                                                  curl wget libtool-bin tzdata file 
 
-# I'd like to avoid this but for now... ‾\_('')_/‾
-RUN DEBIAN_FRONTEND=noninteractive apt install -y software-properties-common libpq-dev libmysqlclient-dev \
-                                                  imagemagick libxml2-dev libxslt-dev libtool-bin libyaml-dev \
-                                                  libreadline-dev autoconf pkg-config gettext libglib2.0-dev \
-                                                  libyaml-0-2 libmagickcore-dev
+# Please keep the following list sorted.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    autoconf \
+    build-essential \
+    bzip2 \
+    ca-certificates \
+    curl \
+    file \
+    gettext \
+    git \
+    gzip \
+    imagemagick \
+    libbz2-dev \
+    libglib2.0-dev \
+    libmagickcore-dev \
+    libmysqlclient-dev \
+    libpq-dev \
+    libreadline-dev \
+    libreadline-dev \
+    libsqlite3-dev \
+    libssl-dev \
+    libtool-bin \
+    libxml2-dev \
+    libxslt-dev \
+    libyaml-0-2 \
+    libyaml-dev \
+    pkg-config \
+    software-properties-common \
+    tar \
+    tzdata \
+    unzip \
+    wget \
+    xzutils \
+    zip \
+    zlib1g-dev \
+  && rm -rf /var/lib/apt/lists/*

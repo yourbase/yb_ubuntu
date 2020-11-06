@@ -14,7 +14,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-name: Publish Docker image
+name: Docker
 on:
   push:
     branches:
@@ -24,7 +24,7 @@ on:
       - ".github/workflows/docker.yml"
 jobs:
   docker:
-    name: Publish
+    name: Build
     runs-on: ubuntu-18.04
     steps:
     - name: Check out code
@@ -33,17 +33,17 @@ jobs:
       uses: docker/setup-qemu-action@v1
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
-    - name: Build and Push 16.04 image
+    - name: Build 16.04 image
       uses: docker/build-push-action@v2
       with:
         file: ./Dockerfile-16.04
         tags: |
-          ghcr.io/yourbase/yb_ubuntu:16.04
+          yourbase/yb_ubuntu:16.04
         push: false
-    - name: Build and Push 18.04 image
+    - name: Build 18.04 image
       uses: docker/build-push-action@v2
       with:
         file: ./Dockerfile-18.04
         tags: |
-          ghcr.io/yourbase/yb_ubuntu:18.04
+          yourbase/yb_ubuntu:18.04
         push: false
